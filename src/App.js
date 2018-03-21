@@ -3,6 +3,25 @@ import {Navbar} from './components/Navbar';
 import './App.css';
 
 class App extends Component {
+  state = {
+  user: { }
+};
+gitUser = () => {
+  const name = this.refs.name.value;
+  fetch(`https://www.presentedbyklekt.com/api/product/get/10033/inventory`)
+  .then(response => response.json())
+  .then(data => console.log(data))
+  // .then(data =>{
+  //   this.setState({
+  //     user:{
+  //       name: data.name,
+  //       location: data.location,
+  //       avatar_url: data.avatar_url,
+  //       bio: data.bio
+  //     }
+  //   })
+  // })
+};
   render() {
     return (
       <div className="App">
@@ -22,9 +41,9 @@ class App extends Component {
                 </div>
                 <div className="col-md-3 col-xs-12 col-sm-6 col-lg-3">
                     <div className="row">
-                    <div class="row">
-                          <div class="col-md-12">
-                              <select type="text" class="form-control  multiselect-icon" multiple="multiple" role="multiselect">
+                    <div className="row">
+                          <div className="col-md-12">
+                              <select type="text" className="form-control  multiselect-icon" multiple="multiple" role="multiselect">
                                 <option value="0" data-icon="glyphicon-picture text-primary" selected="selected">Photos</option>
                               </select>
                           </div>
