@@ -7,20 +7,11 @@ class App extends Component {
   user: { }
 };
 gitUser = () => {
-  const name = this.refs.name.value;
+  //const name = this.refs.name.value;
   fetch(`https://www.presentedbyklekt.com/api/product/get/10033/inventory`)
   .then(response => response.json())
   .then(data => console.log(data))
-  // .then(data =>{
-  //   this.setState({
-  //     user:{
-  //       name: data.name,
-  //       location: data.location,
-  //       avatar_url: data.avatar_url,
-  //       bio: data.bio
-  //     }
-  //   })
-  // })
+
 };
   render() {
     return (
@@ -36,10 +27,10 @@ gitUser = () => {
             <div className="row">
                 <div className="col-md-6 col-xs-12 col-sm-6 col-lg-6">
                   <div className="col-xs-12">
-                    <img src="./img/Off White x Nike Air Jordan I All White Part 2__AQ0818-100.jpg" className="img-box" />
+                    <img src="./img/big_img_shoe.jpg" className="img-box" />
                   </div>
                 </div>
-                <div className="col-md-3 col-xs-12 col-sm-6 col-lg-3">
+                {/*<div className="col-md-3 col-xs-12 col-sm-6 col-lg-3">
                     <div className="row">
                     <div className="row">
                           <div className="col-md-12">
@@ -49,7 +40,7 @@ gitUser = () => {
                           </div>
                   	</div>
                     </div>
-                </div>
+                </div>*/}
             </div>
         </div>
       </div>
