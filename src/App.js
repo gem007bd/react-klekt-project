@@ -1,18 +1,45 @@
 import React, { Component } from 'react';
 import {Navbar} from './components/Navbar';
+import {Inventory} from './components/Inventory';
 import './App.css';
 
 class App extends Component {
-  state = {
-  user: { }
-};
-gitUser = () => {
-  //const name = this.refs.name.value;
-  fetch(`https://www.presentedbyklekt.com/api/product/get/10033/inventory`)
-  .then(response => response.json())
-  .then(data => console.log(data))
 
-};
+  constructor() {
+      super();
+      this.state = {
+          inventories: [],
+      };
+  }
+  componentDidMount() {
+    let initialInventories = [];
+    fetch('https://www.presentedbyklekt.com/api/product/get/10033/inventory')
+        .then(response => {
+            return response.json();
+        }).then(data => {
+        initialInventories = data.inventory.map((inventory) => {
+            return inventory
+        });
+        console.log(initialInventories);
+        this.setState({
+            inventories: initialInventories,
+        });
+    });
+}
+//
+//   state = {
+//   user: { }
+// };
+// gitUser = () => {
+//   //const name = this.refs.name.value;
+//   fetch(`https://www.presentedbyklekt.com/api/product/get/10033/inventory`)
+//   .then(response => response.json())
+//   .then(data => {
+//     inventory = data.results.map((inventory) => { return inventory})
+//   })
+//   .then(data => console.log(data))
+//
+// };
   render() {
     return (
       <div className="App">
@@ -21,13 +48,15 @@ gitUser = () => {
           <div className="col-xs-12">
             <div className="input-group col-xs-4 pull-right">
                 <input type="text" className="form-control" placeholder="Enter a user name"  ref="name" />
-                <span className="btn btn-primary input-group-addon" onClick={this.gitUser}>Get user Detail</span>
+                <span className="btn btn-primary input-group-addon">Get user Detail</span>
             </div>
           </div>
             <div className="row">
                 <div className="col-md-6 col-xs-12 col-sm-6 col-lg-6">
                   <div className="col-xs-12">
-                    <img src="./img/big_img_shoe.jpg" className="img-box" />
+                    {/*<img src="./img/big_img_shoe.jpg" className="img-box" />
+                    */}
+                    <Inventory state={this.state}/>
                   </div>
                 </div>
                 {/*<div className="col-md-3 col-xs-12 col-sm-6 col-lg-3">
