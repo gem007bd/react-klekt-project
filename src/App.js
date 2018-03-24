@@ -20,7 +20,7 @@ class App extends Component {
         initialInventories = data.inventory.map((inventory) => {
             return inventory
         });
-        console.log(initialInventories);
+        console.log(data);
         this.setState({
             inventories: initialInventories,
         });
@@ -45,31 +45,14 @@ class App extends Component {
       <div className="App">
         <Navbar />
         <div className="container">
-          <div className="col-xs-12">
-            <div className="input-group col-xs-4 pull-right">
-                <input type="text" className="form-control" placeholder="Enter a user name"  ref="name" />
-                <span className="btn btn-primary input-group-addon">Get user Detail</span>
-            </div>
-          </div>
             <div className="row">
-                <div className="col-md-6 col-xs-12 col-sm-6 col-lg-6">
-                  <div className="col-xs-12">
-                    {/*<img src="./img/big_img_shoe.jpg" className="img-box" />
-                    */}
-                    <Inventory state={this.state}/>
+                  <div className="col-xs-8">
+                    <img src="./img/big_img_shoe.jpg" className="img-responsive" />
                   </div>
+                <div className="col-xs-4">
+                    {this.state.data}
+                    <Inventory state={this.state}/>
                 </div>
-                {/*<div className="col-md-3 col-xs-12 col-sm-6 col-lg-3">
-                    <div className="row">
-                    <div className="row">
-                          <div className="col-md-12">
-                              <select type="text" className="form-control  multiselect-icon" multiple="multiple" role="multiselect">
-                                <option value="0" data-icon="glyphicon-picture text-primary" selected="selected">Photos</option>
-                              </select>
-                          </div>
-                  	</div>
-                    </div>
-                </div>*/}
             </div>
         </div>
       </div>

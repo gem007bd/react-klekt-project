@@ -8,12 +8,12 @@ export class Inventory extends React.Component {
     render () {
         let inventories = this.props.state.inventories;
         let optionItems = inventories.map((Inventory) =>
-                <option key={Inventory.name}>{Inventory.size}</option>
+                <option key={Inventory.inventoryId}>{Inventory.size}</option>
             );
 
         return (
          <div>
-             <select>
+             <select className="form-control" >
                 {optionItems}
              </select>
          </div>
