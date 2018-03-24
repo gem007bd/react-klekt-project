@@ -8,7 +8,7 @@ class App extends Component {
   constructor() {
       super();
       this.state = {
-          inventories: [],
+          inventories: []
       };
   }
   componentDidMount() {
@@ -76,5 +76,7 @@ class App extends Component {
     );
   }
 }
+
+
 
 export default App;
