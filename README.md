@@ -1,6 +1,10 @@
 ## React Klekt Test Project
 ## Available Scripts
 
+##install react-select
+
+## `nmp install react-select`
+
 In the project directory, you can run:
 
 ### `npm start`

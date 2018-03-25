@@ -22,7 +22,44 @@
   font-size: large;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.product-subtitle-gray{
+  color: #abacad ;
+  margin: 5px 0;
+  font-size: 18px;
+  line-height: 1.2em;
+}
+.margin-top-40{
+  margin-top: 40px;
+}
+.k-tab-bar{
+  height: 40px;
+  padding: 0;
+  margin: 0;
+  border-bottom: 1px solid #ccc;
+}
+.k-tabs-tab{
+  margin: 0;
+    border: none;
+    padding: 0 15px;
+    float: left;
+    position: relative;
+    display: block;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 12px;
+    letter-spacing: 0;
+    text-decoration: none;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    overflow: hidden;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    color: #333;
+}
+.k-tabs-tab:hover{
+  text-decoration: none;
+  color: #55efc4;
 }
