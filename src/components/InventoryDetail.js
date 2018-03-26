@@ -3,7 +3,7 @@ import React from 'react';
 export class InventoryDetail extends React.Component {
   render(){
     let selectedInventories = this.props.state.selectedOption;
-    console.log(selectedInventories);
+    //console.log(selectedInventories.purchaseURL);
     if(selectedInventories){
       return (
         <div className="margin-top-20 product-detail-part">

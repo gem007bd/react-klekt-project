@@ -25,7 +25,7 @@ export class Inventory extends React.Component {
             value: Inventory.price,
             label:Inventory.size,
             basePrice:Inventory.basePrice,
-            purchaseURI: Inventory.purchaseURL,
+            purchaseURL: Inventory.purchaseURL,
             currency: Inventory.currency
           })
         );

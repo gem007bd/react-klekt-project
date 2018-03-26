@@ -23,7 +23,7 @@ class App extends Component {
           initialInventories = data.inventory.map((inventory) => {
               return inventory
           });
-          console.log(data);
+          //console.log(data);
           this.setState({
               inventories: initialInventories,
               brand: data.brand,
