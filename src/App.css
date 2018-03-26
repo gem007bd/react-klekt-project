@@ -31,6 +31,9 @@
 .margin-top-40{
   margin-top: 40px;
 }
+.margin-top-20{
+  margin-top: 20px;
+}
 .k-tab-bar{
   height: 40px;
   padding: 0;
@@ -62,4 +65,24 @@
 .k-tabs-tab:hover{
   text-decoration: none;
   color: #55efc4;
+}
+.product-detail-part{
+  font-size: 15px;
+  color: #2b2b2b;
+}
+.border-gray{
+  border-bottom:1px solid #eee;
+  height: 30px;
+  margin-bottom: 5px;
+}
+.offset0{
+  padding-left: 0 !important;
+  padding-right: 0 !important;;
+}
+.text-bold{
+  font-size: 18px;
+  font-weight: 700;
+}
+.padding-10{
+  padding:10px !important;
 }

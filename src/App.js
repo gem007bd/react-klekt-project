@@ -47,7 +47,9 @@ class App extends Component {
                       <h4>{this.state.brand}</h4>
                       <div className="product-subtitle-gray">{this.state.title}</div>
                       <div className="product-subtitle-gray">StyleCode: {this.state.styleCode}</div>
-                      <Inventory state={this.state}/>
+                      <div className="margin-top-40">
+                          <Inventory state={this.state}/>
+                      </div>
                 </div>
             </div>
         </div>
